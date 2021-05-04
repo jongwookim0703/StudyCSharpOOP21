@@ -9,7 +9,7 @@ namespace ClassTestApp
     class Cat : Animal //상속받았으니까 Cat에서 Animal에 있는 protected 쓸 수 있음 , 메인에선 못씀
     {
         //기본 생성자
-         public string Name { get; set; }
+        public string Name { get; set; }
         public string Color { get; set; }
         public int Age { get; set; }
         public Cat() { /* Nothing */}
@@ -46,6 +46,11 @@ namespace ClassTestApp
 
         public void Meow() { Console.WriteLine($"{this.Color} {this.Name}, 냐옹~! "); }
 
-       
+        public override void sleep()
+        {   
+            base.sleep(); //부모의 sleep() 실행
+                          // 이후 자식 클래스의 sleep 내용 실행
+            Console.WriteLine($"{this.Color} 고양이 {this.name} 이가 ZZ잡니다~!");
+        }
     }
 }

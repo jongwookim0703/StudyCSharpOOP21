@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ExceptionServices;
 
 namespace ClassTestApp
 {
@@ -34,6 +35,15 @@ namespace ClassTestApp
             Cat noname = new Cat("은색", 10);
             noname.Name = "야오옹이";
             noname.Meow();
+            Console.WriteLine();
+
+
+            //보통 var로 통일해서 사용함
+            var list = (First : "Cat", Second : "Dog", Third : "Pig", 55);
+            Console.WriteLine($"튜플 첫 번째 : {list.First}"); //First로 이름을 정하겠다
+            Console.WriteLine($"튜플 두 번째 : {list.Item2}"); //item1,2,3는 이름을 지정하지 않았을 때 
+            Console.WriteLine($"튜플 세 번째 : {list.Item3}"); //자동 생성 해줌
+            Console.WriteLine($"튜플 네 번째 : {list.Item4}");
         }
     }
 }
