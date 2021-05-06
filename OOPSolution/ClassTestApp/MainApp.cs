@@ -14,7 +14,7 @@ namespace ClassTestApp
             kitty.Age = 3;
             kitty.Color = "하얀색";
             kitty.Meow();
-
+            
              Cat nero = new Cat
             {
                 Name = "네로",
