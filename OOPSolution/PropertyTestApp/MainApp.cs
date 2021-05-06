@@ -19,6 +19,24 @@ namespace PropertyTestApp
 
             Dog streetDog = new Dog();
             Console.WriteLine($"{streetDog.Name}는 {streetDog.Color} 색입니다.");
+
+            Dog dog1 = new Dog();
+            dog1.Name = "황구";
+            dog1.Color = "노랑색";
+            dog1.Age = 10;
+
+            Dog dog2 = new Dog();
+            {
+                dog2.Name = "깜장이"; 
+                dog2.Age = 5;
+                dog2.Color = "검정색";
+            };
+
+            // 무명 형식
+            var myInstance = new { Name = "김종우", Age = 27 };
+            Console.WriteLine(myInstance.Name);
+            Console.WriteLine(myInstance.Age);
+
         }
     }
 }
