@@ -6,7 +6,7 @@ namespace IndexerTestApp
     class MainApp
     {
         static void Main(string[] args)
-        {
+        {   
             Console.WriteLine(" MyList 예제! ");
 
             Mylist list = new Mylist();
