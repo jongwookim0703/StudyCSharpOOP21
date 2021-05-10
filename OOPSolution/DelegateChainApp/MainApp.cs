@@ -28,10 +28,15 @@ namespace DelegateChainApp
             #endregion
 
             Calculate calc;
+            //무명함수 표현1
+            /* 
             calc = delegate (int a, int b)
             {
                 return a + b;
             };
+            */
+            //무명함수 표현 2 = 람다식
+            calc = (a, b) => a + b;
             Console.WriteLine($"a + b = {calc(3,5)}");
         }
     }
