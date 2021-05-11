@@ -22,13 +22,11 @@ namespace WinformThreadApp
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             progressBar2.Minimum = 0;
             progressBar2.Maximum = 10000;
 
-            
             // 스레드로 분리 윈폼의 화면스레드, 처리스레드 분리
             Thread th = new Thread(() => {
                 for (int i = 0; i <= 10000; i++)
